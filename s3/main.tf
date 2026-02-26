@@ -3,10 +3,6 @@ resource "aws_s3_bucket" "this" {
   force_destroy = var.force_destroy
 }
 
-resource "aws_s3_bucket_acl" "this" {
-  bucket = aws_s3_bucket.this.id
-}
-
 resource "aws_s3_bucket_versioning" "versioning" {
   bucket = aws_s3_bucket.this.id
 
